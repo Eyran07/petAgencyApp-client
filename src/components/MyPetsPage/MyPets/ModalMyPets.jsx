@@ -128,7 +128,7 @@ const ModalMyPets = (props) => {
 
   const handleUnsave = () => {
     axios
-      .post(`/pets/${id}/unsave`, {
+      .post(`${process.env.REACT_APP_SERVER_URL}/pets/${id}/unsave`, {
         userId: myId,
       })
       .then((res) => {
