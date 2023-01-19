@@ -1,0 +1,12 @@
+.login {
+    font-size: 1rem;
+    color: #ffff;
+    background-color: rgb(80, 80, 80);
+    border-style: none;
+  }
+
+.conta {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+}

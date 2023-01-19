@@ -1,0 +1,33 @@
+.admin {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.admin-contain {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-add {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 2rem;
+    padding: 2.5rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow : 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.contain-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 2rem;
+    padding: 2.5rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow : 0 0 10px 0 rgba(0,0,0,0.2);
+}

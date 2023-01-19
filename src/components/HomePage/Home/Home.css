@@ -1,0 +1,22 @@
+body {
+    background-image: url("/src/img/fond2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    font-family: "Gill Sans", sans-serif;
+}
+
+
+.container {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(80, 80, 80);
+}
+
+h1{
+    margin: 1rem;
+}

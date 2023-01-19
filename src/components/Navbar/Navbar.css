@@ -1,0 +1,19 @@
+.nav-container {
+  width: 100%;
+  background-color: rgb(80, 80, 80);
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  align-items: center;
+}
+
+.btns {
+  color: #ffff;
+  font-size: 1.2rem;
+  background-color: rgb(80, 80, 80);
+  border: none;
+}
+
+.btns:hover {
+  background-color: rgba(240, 248, 255, 0.2);
+}
