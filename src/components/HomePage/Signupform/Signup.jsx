@@ -29,7 +29,7 @@ const Signup = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:3003/users", formData)
+      .post(`${process.env.REACT_APP_SERVER_URL}/users`, formData)
       .then((response) => {
         console.log(response);
         setShowSuccess(true); // set showSuccess to true

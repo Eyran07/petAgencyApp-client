@@ -41,7 +41,7 @@ const SavedPets = () => {
         for (let i = 0; i < profile.petsSaved.length; i++) {
           try {
             const response = await axios.get(
-              `http://localhost:3003/petss/${profile.petsSaved[i]}`
+              `${process.env.REACT_APP_SERVER_URL}/petss/${profile.petsSaved[i]}`
             );
             console.log(response);
             setPets(response.data);

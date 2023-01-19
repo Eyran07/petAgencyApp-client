@@ -47,7 +47,7 @@ const ModalMyPets = (props) => {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `http://localhost:3003/userss/${myId}`
+          `${process.env.REACT_APP_SERVER_URL}/userss/${myId}`
         );
         console.log(response);
         const user = response.data;
@@ -64,7 +64,7 @@ const ModalMyPets = (props) => {
 
   const handleAdoptOrFoster = (actionType) => {
     axios
-      .post(`http://localhost:3003/pets/${id}/adopt`, {
+      .post(`${process.env.REACT_APP_SERVER_URL}/pets/${id}/adopt`, {
         actionType: actionType,
         userId: myId,
       })
@@ -91,7 +91,7 @@ const ModalMyPets = (props) => {
 
   const handleReturn = () => {
     axios
-      .post(`http://localhost:3003/pets/${id}/return`, {
+      .post(`${process.env.REACT_APP_SERVER_URL}/pets/${id}/return`, {
         actionType: "available",
         userId: myId,
       })
@@ -110,7 +110,7 @@ const ModalMyPets = (props) => {
 
   const handleSave = () => {
     axios
-      .post(`http://localhost:3003/pets/${id}/save`, {
+      .post(`${process.env.REACT_APP_SERVER_URL}/pets/${id}/save`, {
         userId: myId,
       })
       .then((res) => {
@@ -128,7 +128,7 @@ const ModalMyPets = (props) => {
 
   const handleUnsave = () => {
     axios
-      .post(`http://localhost:3003/pets/${id}/unsave`, {
+      .post(`/pets/${id}/unsave`, {
         userId: myId,
       })
       .then((res) => {

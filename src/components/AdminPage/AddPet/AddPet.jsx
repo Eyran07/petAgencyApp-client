@@ -41,7 +41,7 @@ const AddPet = () => {
     }
     formDataWithImage.append("image", image);
     axios
-      .post("http://localhost:3003/pet", formDataWithImage, {
+      .post(`${process.env.REACT_APP_SERVER_URL}/pet`, formDataWithImage, {
           headers: { 'Content-Type': 'multipart/form-data' }
       })
       .then((response) => {

@@ -29,7 +29,7 @@ const Dashboard = () => {
   useEffect(() => {
     async function fetchUsers() {
       try {
-        const response = await axios.get("http://localhost:3003/users");
+        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/users`);
         setUsers(response.data);
         console.log(response);
       } catch (error) {
@@ -38,7 +38,7 @@ const Dashboard = () => {
     }
     async function fetchPets() {
       try {
-        const response = await axios.get("http://localhost:3003/pet");
+        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/pet`);
         setPets(response.data);
         console.log(response);
       } catch (error) {

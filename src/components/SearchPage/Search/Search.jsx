@@ -46,7 +46,7 @@ const Search = () => {
     if(filter.minHeight === 1) {
         filter.minHeight = ""
     }
-    axios.get("http://localhost:3003/pet", {params: filter})
+    axios.get(`${process.env.REACT_APP_SERVER_URL}/pet`, {params: filter})
       .then((response) => {
         setPets(response.data);
         console.log(response);

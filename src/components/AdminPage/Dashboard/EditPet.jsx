@@ -58,7 +58,7 @@ const EditPet = (props) => {
     event.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:3003/pet/${petId}`,
+        `${process.env.REACT_APP_SERVER_URL}/pet/${petId}`,
         profile
       );
       console.log(response);

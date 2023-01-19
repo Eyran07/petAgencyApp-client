@@ -14,7 +14,7 @@ const Profile = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(`http://localhost:3003/userss/${myId}`);
+        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/userss/${myId}`);
         console.log(response);
         const user = response.data;
         setProfile({
@@ -44,7 +44,7 @@ const Profile = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        const response = await axios.put(`http://localhost:3003/user/${myId}`, profile);
+        const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/user/${myId}`, profile);
         console.log(response);
         setSubmissionMessage("Profile updated successfully!");
     } catch (error) {

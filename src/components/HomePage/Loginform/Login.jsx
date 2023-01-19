@@ -28,7 +28,7 @@ const Login = ({ setShow }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:3003/login", formData)
+      .post(`${process.env.REACT_APP_SERVER_URL}/login`, formData)
       .then((response) => {
         console.log(response);
         if (response.data.token) {

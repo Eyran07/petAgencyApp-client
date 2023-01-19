@@ -36,7 +36,7 @@ const ModalUser = (props) => {
     event.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:3003/user/${userId}`,
+        `${process.env.REACT_APP_SERVER_URL}/user/${userId}`,
         profile
       );
       console.log(response);

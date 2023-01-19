@@ -18,7 +18,7 @@ const AdoptedPets = () => {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `http://localhost:3003/userss/${myId}`
+          `${process.env.REACT_APP_SERVER_URL}/userss/${myId}`
         );
         console.log(response);
         setProfile({
@@ -39,7 +39,7 @@ const AdoptedPets = () => {
       for (let i = 0; i < profile.petsAdopted.length; i++) {
         try {
           const response = await axios.get(
-            `http://localhost:3003/petss/${profile.petsAdopted[i]}`
+            `${process.env.REACT_APP_SERVER_URL}/petss/${profile.petsAdopted[i]}`
           );
           console.log(response);
           setPets(response.data);
@@ -65,7 +65,7 @@ const AdoptedPets = () => {
       for (let i = 0; i < profile.petsFostered.length; i++) {
         try {
           const response = await axios.get(
-            `http://localhost:3003/petss/${profile.petsFostered[i]}`
+            `${process.env.REACT_APP_SERVER_URL}/petss/${profile.petsFostered[i]}`
           );
           console.log(response);
           setPets(response.data);

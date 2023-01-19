@@ -14,7 +14,7 @@ const Message = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(`http://localhost:3003/userss/${myId}`);
+        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/userss/${myId}`);
         console.log(response);
         const user = response.data;
         setUser({
